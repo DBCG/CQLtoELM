@@ -464,6 +464,16 @@ public class MATCQL2ELMListener extends cqlBaseListener {
         return element;
     }
 
+    @Override
+    public void enterInFixSetExpression(cqlParser.InFixSetExpressionContext ctx) {
+        // TODO: This needs to be implemented to support tracing through union, intersect, etc...
+    }
+
+    @Override
+    public void exitInFixSetExpression(cqlParser.InFixSetExpressionContext ctx) {
+        // TODO: This needs to be implemented to support tracing through union, intersect, etc...
+    }
+
     private void parseChildLibraries(IncludeDef def) throws IOException {
         String childCQLString = this.childrenLibraries.get(def.getPath() + "-" + def.getVersion());
 
